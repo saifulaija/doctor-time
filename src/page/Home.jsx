@@ -1,7 +1,12 @@
-
+import { Link } from "react-router-dom";
 import heroImg1 from "../assets/images/hero-img01.png";
 import heroImg2 from "../assets/images/hero-img02.png";
 import heroImg3 from "../assets/images/hero-img03.png";
+import icon1 from "../assets/images/icon01.png";
+import icon2 from "../assets/images/icon02.png";
+import icon3 from "../assets/images/icon03.png";
+import { BsArrowRight } from "react-icons/bs";
+import About from "../components/About/About";
 
 const Home = () => {
   return (
@@ -66,6 +71,84 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Hero content */}
+      <section>
+        <div className="container mx-auto px-8 md:px-10 mt-10 font-serif">
+          <div className="lg:w-[470px] mx-auto">
+            <h2 className="heading text-center">
+              Providing the best medical services
+            </h2>
+            <p className="text-para">
+              World-class care for everyone. Our service system offers
+              unmatched,effort health care.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] mt-[30px] lg:mt-[50px]">
+            <div className="py-[30px] px-5">
+              <div className="flex items-center justify-center ">
+                <img src={icon1} alt="" />
+              </div>
+              <div className="mt-[25px]">
+                <h2 className="text-[25px] leading-8 text-headingColor font-[700] text-center">
+                  Find a Doctor
+                </h2>
+                <p className="text-[16px] leading-5 text-textColor font-[500]">
+                  World-class care for everyone.Our health system offers
+                  unmatched, expert health care.From the lab to the clinic
+                </p>
+                <Link
+                  to="/doctors"
+                  className="w-[40px] h-[40px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
+                >
+                  <BsArrowRight></BsArrowRight>
+                </Link>
+              </div>
+            </div>
+            <div className="py-[30px] px-5">
+              <div className="flex items-center justify-center ">
+                <img src={icon2} alt="" />
+              </div>
+              <div className="mt-[25px]">
+                <h2 className="text-[25px] leading-8 text-headingColor font-[700] text-center">
+                  Find Location
+                </h2>
+                <p className="text-[16px] leading-5 text-textColor font-[500]">
+                  World-class care for everyone.Our health system offers
+                  unmatched, expert health care.From the lab to the clinic
+                </p>
+                <Link
+                  to="/doctors"
+                  className="w-[40px] h-[40px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
+                >
+                  <BsArrowRight></BsArrowRight>
+                </Link>
+              </div>
+            </div>
+            <div className="py-[30px] px-5">
+              <div className="flex items-center justify-center ">
+                <img src={icon3} alt="" />
+              </div>
+              <div className="mt-[25px]">
+                <h2 className="text-[25px] leading-8 text-headingColor font-[700] text-center">
+                  Book Appointment
+                </h2>
+                <p className="text-[16px] leading-5 text-textColor font-[500]">
+                  World-class care for everyone.Our health system offers
+                  unmatched, expert health care.From the lab to the clinic
+                </p>
+                <Link
+                  to="/doctors"
+                  className="w-[40px] h-[40px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
+                >
+                  <BsArrowRight></BsArrowRight>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <About></About>
     </>
   );
 };
