@@ -1,8 +1,12 @@
 import aboutImg from "../../assets/images/about.png";
 import aboutCardImg from "../../assets/images/about-card.png";
 import { Link } from "react-router-dom";
+import ServiceList from "../Services/ServiceList";
+import Feature from "../Featurte/Feature";
+import Doctors from "../Doctors/Doctors";
 const About = () => {
   return (
+      <>
     <div className="container mx-auto px-8 md:px-10 my-10">
       {/* {about image} */}
       <div className="flex justify-between gap-[50px] md:gap-[100px] flex-col lg:flex-row">
@@ -24,6 +28,27 @@ const About = () => {
         </div>
       </div>
     </div>
+    
+    {/* ============Service section */}
+
+    <section>
+      <div className="container mx-auto px-8 md:px-10 py-10 font-serif">
+            <div className="xl:w-[570px] mx-auto">
+                  <h2 className="heading text-center">Our Medical Services</h2>
+                  <p className="text-para text-center"> World-class care for everyone.Our health system offers
+                  unmatched, expert health care.From the lab to the clinic</p>
+                 
+            </div>
+            <ServiceList></ServiceList>
+            <Feature></Feature>
+            <Doctors></Doctors>
+
+
+      </div>
+    </section>
+    {/* ============Service section End */}
+
+    </>
   );
 };
 
